@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://electromov.com.ar/sitemap.xml
