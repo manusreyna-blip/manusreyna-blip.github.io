@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+  <channel>
+    <title>ElectroMov — Movilidad Eléctrica Argentina</title>
+    <link>https://electromov.com.ar</link>
+    <description>Cargadores para scooter y bicicleta eléctrica en Argentina</description>
+
+    <item>
+      <g:id>CARGADOR-36V-2A-ARG</g:id>
+      <g:title>Cargador 36V 2A para Scooter y Bicicleta Eléctrica Argentina</g:title>
+      <g:description>Cargador original 36V con salida 42V DC para scooter eléctrico y bicicleta eléctrica. Conector DC 5.5x2.1mm. Compatible con la mayoría de scooters y e-bikes 36V. Envío a todo Argentina por Andreani y OCA. Garantía 6 meses. Asesoramiento técnico gratis por WhatsApp.</g:description>
+      <g:link>https://electromov.com.ar/cargadores-scooter-electrico-argentina.html</g:link>
+      <g:image_link>https://electromov.com.ar/imagenes/cargador-36v-scooter-electrico-argentina.jpg</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>55000 ARS</g:price>
+      <g:brand>ElectroMov</g:brand>
+      <g:product_type>Electrónica > Cargadores > Cargadores para vehículos eléctricos</g:product_type>
+      <g:google_product_category>222</g:google_product_category>
+      <g:shipping>
+        <g:country>AR</g:country>
+        <g:service>Andreani / OCA</g:service>
+        <g:price>0 ARS</g:price>
+      </g:shipping>
+      <g:identifier_exists>no</g:identifier_exists>
+    </item>
+
+    <item>
+      <g:id>CARGADOR-48V-2A-ARG</g:id>
+      <g:title>Cargador 48V 2A para Scooter y Bicicleta Eléctrica Argentina</g:title>
+      <g:description>Cargador original 48V con salida 54.6V DC para scooter eléctrico y bicicleta eléctrica 48V. Conector XLR 3 pines o DC según modelo. Mayor potencia y autonomía. Envío a todo Argentina por Andreani y OCA. Garantía 6 meses. Asesoramiento técnico gratis por WhatsApp.</g:description>
+      <g:link>https://electromov.com.ar/cargadores-scooter-electrico-argentina.html</g:link>
+      <g:image_link>https://electromov.com.ar/imagenes/cargador-48v-scooter-electrico-argentina.jpg</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>65000 ARS</g:price>
+      <g:brand>ElectroMov</g:brand>
+      <g:product_type>Electrónica > Cargadores > Cargadores para vehículos eléctricos</g:product_type>
+      <g:google_product_category>222</g:google_product_category>
+      <g:shipping>
+        <g:country>AR</g:country>
+        <g:service>Andreani / OCA</g:service>
+        <g:price>0 ARS</g:price>
+      </g:shipping>
+      <g:identifier_exists>no</g:identifier_exists>
+    </item>
+
+    <item>
+      <g:id>CARGADOR-60V-2A-ARG</g:id>
+      <g:title>Cargador 60V 2A para Scooter Eléctrico Alta Potencia Argentina</g:title>
+      <g:description>Cargador original 60V con salida 67.2V DC para scooters de alta potencia y motos eléctricas. Conector GX16 o XLR según modelo. Para baterías 60V de litio. Envío a todo Argentina por Andreani y OCA. Garantía 6 meses. Asesoramiento técnico gratis por WhatsApp.</g:description>
+      <g:link>https://electromov.com.ar/cargadores-scooter-electrico-argentina.html</g:link>
+      <g:image_link>https://electromov.com.ar/imagenes/cargador-60v-scooter-electrico-argentina.jpg</g:image_link>
+      <g:condition>new</g:condition>
+      <g:availability>in_stock</g:availability>
+      <g:price>75000 ARS</g:price>
+      <g:brand>ElectroMov</g:brand>
+      <g:product_type>Electrónica > Cargadores > Cargadores para vehículos eléctricos</g:product_type>
+      <g:google_product_category>222</g:google_product_category>
+      <g:shipping>
+        <g:country>AR</g:country>
+        <g:service>Andreani / OCA</g:service>
+        <g:price>0 ARS</g:price>
+      </g:shipping>
+      <g:identifier_exists>no</g:identifier_exists>
+    </item>
+
+  </channel>
+</rss>
