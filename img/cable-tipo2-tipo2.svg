@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f8f6"/>
+
+  <!-- Product info top -->
+  <text x="400" y="60" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="22" fill="#0a0a1a" letter-spacing="3" font-weight="900">CABLE TIPO 2 A TIPO 2</text>
+  <text x="400" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555" letter-spacing="2">7,4 kW / 22 kW · 5 METROS · WALLBOX &amp; ESTACIONES PÚBLICAS</text>
+  <line x1="260" y1="105" x2="540" y2="105" stroke="#00E5A0" stroke-width="2"/>
+
+  <!-- Specs -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#333">
+    <text x="160" y="132" text-anchor="middle">✅ Certificación CE</text>
+    <text x="330" y="132" text-anchor="middle">💧 IP55</text>
+    <text x="480" y="132" text-anchor="middle">🔒 Bloqueo doble</text>
+    <text x="640" y="132" text-anchor="middle">⚡ Hasta 22 kW</text>
+  </g>
+
+  <!-- Cable - straight with gentle S curve -->
+  <path d="M 160 300 Q 280 260 400 300 Q 520 340 640 300" fill="none" stroke="#1e1e3a" stroke-width="18" stroke-linecap="round"/>
+  <!-- Cable highlight -->
+  <path d="M 160 296 Q 280 256 400 296 Q 520 336 640 296" fill="none" stroke="#3a3a5a" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- TYPE 2 CONNECTOR LEFT -->
+  <g transform="translate(120,300)">
+    <rect x="-35" y="-65" width="70" height="85" rx="12" fill="#00B87A" stroke="#009966" stroke-width="1.5"/>
+    <rect x="-35" y="-65" width="70" height="22" rx="12" fill="#00cc88"/>
+    <polygon points="0,-20 18,-11 23,7 14,24 -14,24 -23,7 -18,-11" fill="#006644" stroke="#009966" stroke-width="1.5" transform="translate(0,16)"/>
+    <circle cx="-9" cy="18" r="3.5" fill="#004433"/>
+    <circle cx="9" cy="18" r="3.5" fill="#004433"/>
+    <circle cx="0" cy="10" r="3.5" fill="#004433"/>
+    <circle cx="-13" cy="28" r="3" fill="#004433"/>
+    <circle cx="13" cy="28" r="3" fill="#004433"/>
+    <rect x="-7" y="32" width="14" height="5" rx="1" fill="#004433"/>
+    <rect x="-28" y="6" width="56" height="5" rx="2" fill="#009966" opacity="0.6"/>
+    <text x="0" y="-48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" letter-spacing="1" font-weight="bold">TIPO 2</text>
+    <text x="0" y="-39" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ccffee">IEC 62196</text>
+  </g>
+
+  <!-- TYPE 2 CONNECTOR RIGHT (mirrored) -->
+  <g transform="translate(680,300) scale(-1,1)">
+    <rect x="-35" y="-65" width="70" height="85" rx="12" fill="#00B87A" stroke="#009966" stroke-width="1.5"/>
+    <rect x="-35" y="-65" width="70" height="22" rx="12" fill="#00cc88"/>
+    <polygon points="0,-20 18,-11 23,7 14,24 -14,24 -23,7 -18,-11" fill="#006644" stroke="#009966" stroke-width="1.5" transform="translate(0,16)"/>
+    <circle cx="-9" cy="18" r="3.5" fill="#004433"/>
+    <circle cx="9" cy="18" r="3.5" fill="#004433"/>
+    <circle cx="0" cy="10" r="3.5" fill="#004433"/>
+    <circle cx="-13" cy="28" r="3" fill="#004433"/>
+    <circle cx="13" cy="28" r="3" fill="#004433"/>
+    <rect x="-7" y="32" width="14" height="5" rx="1" fill="#004433"/>
+    <rect x="-28" y="6" width="56" height="5" rx="2" fill="#009966" opacity="0.6"/>
+    <text x="0" y="-48" text-anchor="middle" font-family="Arial, sans-serif" font-size="7" fill="#fff" letter-spacing="1" font-weight="bold">TIPO 2</text>
+    <text x="0" y="-39" text-anchor="middle" font-family="Arial, sans-serif" font-size="6" fill="#ccffee">IEC 62196</text>
+  </g>
+
+  <!-- Use case labels -->
+  <rect x="60" y="390" width="160" height="50" rx="8" fill="#0a0a1a" opacity="0.07"/>
+  <text x="140" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#444" font-weight="bold">WALLBOX DOMÉSTICO</text>
+  <text x="140" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#777">Sin cable integrado</text>
+
+  <rect x="310" y="390" width="180" height="50" rx="8" fill="#00E5A0" opacity="0.1"/>
+  <text x="400" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#007755" font-weight="bold">YPF PUNTO ELÉCTRICO</text>
+  <text x="400" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#009966">ChargeBox · ZES y más</text>
+
+  <rect x="580" y="390" width="160" height="50" rx="8" fill="#0a0a1a" opacity="0.07"/>
+  <text x="660" y="412" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#444" font-weight="bold">HASTA 22 kW</text>
+  <text x="660" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#777">Si el punto es trifásico</text>
+
+  <!-- Length indicator -->
+  <line x1="160" y1="460" x2="640" y2="460" stroke="#00E5A0" stroke-width="1.5"/>
+  <line x1="160" y1="453" x2="160" y2="467" stroke="#00E5A0" stroke-width="1.5"/>
+  <line x1="640" y1="453" x2="640" y2="467" stroke="#00E5A0" stroke-width="1.5"/>
+  <text x="400" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#555" letter-spacing="1">5 METROS DE LONGITUD</text>
+
+  <!-- Compatible cars label -->
+  <text x="400" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888" letter-spacing="2">COMPATIBLE CON BYD · CHEVROLET SPARK · GEELY EX5 · VOLVO EX30 Y MÁS</text>
+
+  <!-- ElectroMov badge -->
+  <rect x="330" y="528" width="140" height="32" rx="4" fill="#0a0a1a"/>
+  <text x="400" y="549" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="14" fill="#00E5A0" letter-spacing="3">ElectroMov</text>
+</svg>

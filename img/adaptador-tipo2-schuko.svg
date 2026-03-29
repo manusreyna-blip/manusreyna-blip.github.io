@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <rect width="800" height="600" fill="#f8f8f6"/>
+
+  <!-- Product info top -->
+  <text x="400" y="60" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="22" fill="#0a0a1a" letter-spacing="3" font-weight="900">ADAPTADOR TIPO 2 → SCHUKO</text>
+  <text x="400" y="88" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#555" letter-spacing="2">16A · COMPACTO · CERTIFICACIÓN CE</text>
+  <line x1="280" y1="105" x2="520" y2="105" stroke="#00E5A0" stroke-width="2"/>
+
+  <!-- Specs -->
+  <g font-family="Arial, sans-serif" font-size="12" fill="#333">
+    <text x="200" y="132" text-anchor="middle">✅ Certificación CE</text>
+    <text x="400" y="132" text-anchor="middle">🔒 Protección sobrecargas</text>
+    <text x="600" y="132" text-anchor="middle">📦 Cabe en la guantera</text>
+  </g>
+
+  <!-- Adapter body -->
+  <g transform="translate(400,320)">
+    <!-- Main housing -->
+    <rect x="-70" y="-110" width="140" height="160" rx="18" fill="#2d2d2d" stroke="#444" stroke-width="2"/>
+    <!-- Top glossy highlight -->
+    <rect x="-65" y="-105" width="130" height="30" rx="12" fill="#3d3d3d"/>
+    <!-- ElectroMov logo area -->
+    <rect x="-45" y="-88" width="90" height="20" rx="4" fill="#1a1a1a"/>
+    <text x="0" y="-74" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#00E5A0" letter-spacing="2" font-weight="bold">ElectroMov</text>
+    <!-- CE mark -->
+    <text x="38" y="-90" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#888">CE</text>
+    <!-- Status LED -->
+    <circle cx="-42" cy="-90" r="5" fill="#00E5A0" opacity="0.9"/>
+    <circle cx="-42" cy="-90" r="3" fill="#00ffb3"/>
+
+    <!-- TYPE 2 SOCKET (input, top) -->
+    <g transform="translate(0,-30)">
+      <text x="0" y="-28" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00E5A0" letter-spacing="1">ENTRADA TIPO 2</text>
+      <polygon points="0,-18 17,-9 22,8 13,22 -13,22 -22,8 -17,-9" fill="#1a4a3a" stroke="#00994d" stroke-width="1.5"/>
+      <circle cx="-9" cy="5" r="3" fill="#006633"/>
+      <circle cx="9" cy="5" r="3" fill="#006633"/>
+      <circle cx="0" cy="-3" r="3" fill="#006633"/>
+      <circle cx="-12" cy="14" r="2.5" fill="#006633"/>
+      <circle cx="12" cy="14" r="2.5" fill="#006633"/>
+      <rect x="-7" y="17" width="14" height="4" rx="1" fill="#006633"/>
+    </g>
+
+    <!-- Arrow indicator -->
+    <text x="0" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00E5A0">→</text>
+
+    <!-- SCHUKO PINS (output, bottom) -->
+    <g transform="translate(0,52)">
+      <text x="0" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#aaa" letter-spacing="1">SALIDA SCHUKO</text>
+      <ellipse cx="0" cy="8" rx="28" ry="28" fill="#1a1a1a" stroke="#555" stroke-width="1.5"/>
+      <ellipse cx="0" cy="8" rx="22" ry="22" fill="#111"/>
+      <circle cx="-9" cy="5" r="5" fill="#777"/>
+      <circle cx="9" cy="5" r="5" fill="#777"/>
+      <circle cx="0" cy="16" r="4" fill="#555"/>
+    </g>
+
+    <!-- Side label -->
+    <rect x="55" y="-60" width="60" height="22" rx="4" fill="#00E5A0" opacity="0.15"/>
+    <text x="85" y="-45" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#00E5A0" font-weight="bold">16A MAX</text>
+    <rect x="55" y="-30" width="60" height="22" rx="4" fill="#333"/>
+    <text x="85" y="-15" text-anchor="middle" font-family="Arial, sans-serif" font-size="8" fill="#aaa">IEC 62196</text>
+  </g>
+
+  <!-- Size indicator -->
+  <line x1="280" y1="440" x2="520" y2="440" stroke="#ccc" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="400" y="460" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#999">Tamaño aprox. 12 x 8 x 6 cm — cabe en la guantera</text>
+
+  <!-- Compatible cars label -->
+  <text x="400" y="498" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#888" letter-spacing="2">COMPATIBLE CON BYD · CHEVROLET SPARK · GEELY EX5 · VOLVO EX30 Y MÁS</text>
+
+  <!-- ElectroMov badge -->
+  <rect x="330" y="520" width="140" height="32" rx="4" fill="#0a0a1a"/>
+  <text x="400" y="541" text-anchor="middle" font-family="'Arial Black', Arial, sans-serif" font-size="14" fill="#00E5A0" letter-spacing="3">ElectroMov</text>
+</svg>
