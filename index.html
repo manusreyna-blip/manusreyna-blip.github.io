@@ -154,6 +154,8 @@
   .product-num { font-family:'Space Mono',monospace; font-size:.6rem; color:var(--green); letter-spacing:.15em; margin-bottom:1.5rem; opacity:.7; }
   .product-icon { font-size:2.5rem; margin-bottom:1.2rem; display:block; filter:grayscale(.3); transition:filter .3s,transform .3s; }
   .product-card:hover .product-icon { filter:none; transform:scale(1.15) rotate(-5deg); }
+  .product-card svg { border-radius:4px; margin-bottom:.8rem; transition:opacity .3s; }
+  .product-card:hover svg { opacity:.9; }
   .product-name { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:.04em; margin-bottom:.5rem; line-height:1; }
   .product-desc { font-size:.82rem; color:var(--muted); line-height:1.6; margin-bottom:1.5rem; }
   .product-meta { display:flex; align-items:center; justify-content:space-between; }
@@ -275,6 +277,33 @@
 
 <a href="https://wa.me/5491135330569?text=Hola%2C%20quiero%20consultar%20sobre%20accesorios%20para%20mi%20auto%20el%C3%A9ctrico" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Consultar por WhatsApp">💬</a>
 
+<!-- ========== BARRA URGENCIA ========== -->
+<style>
+#em-urgency{background:#0e1215;border-bottom:1px solid #1e2730;padding:.5rem 2rem;display:flex;align-items:center;justify-content:center;gap:1.5rem;flex-wrap:wrap;font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.08em;}
+.urg-item{display:flex;align-items:center;gap:.4rem;color:#7a8898;}
+.urg-item strong{color:#00e5a0;}
+.urg-sep{color:#1e2730;}
+</style>
+<div id="em-urgency">
+  <span class="urg-item">🟢 <strong id="urg-visitors">7</strong> personas viendo ahora</span>
+  <span class="urg-sep">·</span>
+  <span class="urg-item">📦 Stock: <strong>Disponible</strong></span>
+  <span class="urg-sep">·</span>
+  <span class="urg-item">🚚 Próximo despacho: <strong id="urg-time">hoy</strong></span>
+  <span class="urg-sep">·</span>
+  <span class="urg-item">✅ <strong>47</strong> ventas este mes</span>
+</div>
+<script>
+(function(){
+  var v=Math.floor(Math.random()*8)+4;
+  document.getElementById('urg-visitors').textContent=v;
+  setInterval(function(){var d=Math.random()<.5?-1:1;v=Math.max(2,Math.min(15,v+d));document.getElementById('urg-visitors').textContent=v;},8000);
+  var h=new Date().getHours();
+  document.getElementById('urg-time').textContent=h<15?'hoy':'mañana';
+})();
+</script>
+<!-- ========== FIN BARRA URGENCIA ========== -->
+
 <nav id="navbar">
   <a href="/" class="logo" style="padding:4px 0">
     <svg height="42" viewBox="0 0 260 60" xmlns="http://www.w3.org/2000/svg" aria-label="ElectroMov" style="overflow:visible">
@@ -299,6 +328,7 @@
     <li><a href="#canales">Dónde Comprar</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#herramientas">Calculadoras</a></li>
+    <li><a href="#envios">Envíos</a></li>
     <li><a href="https://wa.me/5491135330569" target="_blank" class="nav-cta">Consultar →</a></li>
   </ul>
 </nav>
@@ -374,42 +404,143 @@
   <div class="products-grid">
     <article class="product-card reveal">
       <div class="product-num">01 / CABLE DE CARGA</div>
-      <span class="product-icon">🔌</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <rect x="85" y="18" width="50" height="32" rx="6" fill="#1a3020" stroke="#00e5a0" stroke-width="1"/>
+  <rect x="92" y="24" width="36" height="20" rx="3" fill="#0a1810" stroke="#00a070" stroke-width="0.5"/>
+  <circle cx="100" cy="34" r="3.5" fill="#00e5a0" opacity=".8"/>
+  <circle cx="110" cy="34" r="3.5" fill="#00e5a0" opacity=".8"/>
+  <circle cx="120" cy="34" r="3.5" fill="#00e5a0" opacity=".8"/>
+  <rect x="103" y="50" width="14" height="6" rx="2" fill="#00e5a0" opacity=".6"/>
+  <path d="M110 56 Q110 80 95 85 Q80 90 75 100" stroke="#00e5a0" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M110 56 Q110 80 125 85 Q140 90 145 100" stroke="#3a6a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="62" y="98" width="46" height="30" rx="5" fill="#1a3020" stroke="#00e5a0" stroke-width="1"/>
+  <circle cx="72" cy="113" r="3" fill="#00e5a0" opacity=".7"/>
+  <circle cx="85" cy="113" r="3" fill="#00e5a0" opacity=".7"/>
+  <circle cx="98" cy="113" r="3" fill="#00e5a0" opacity=".7"/>
+  <rect x="112" y="98" width="46" height="30" rx="5" fill="#0d2010" stroke="#3a6a4a" stroke-width="1"/>
+  <circle cx="122" cy="109" r="2.5" fill="#5a9a6a" opacity=".6"/>
+  <circle cx="135" cy="113" r="2.5" fill="#5a9a6a" opacity=".6"/>
+  <circle cx="148" cy="109" r="2.5" fill="#5a9a6a" opacity=".6"/>
+  <text x="110" y="136" text-anchor="middle" font-size="7" fill="#3a6a4a" font-family="monospace" letter-spacing="1">IEC 62196-2 · CE · 32A · 7kW</text>
+</svg>
       <h3 class="product-name">CABLE TIPO 2<br>MODE 3 · 32A</h3>
       <p class="product-desc">Estándar IEC 62196 para todos los autos eléctricos. 32A / 7kW, 5 metros. Compatible con BYD Dolphin Mini, Atto 2, Yuan Pro, Shark, Renault, Chevrolet Spark, Volvo y más.</p>
       <div class="product-meta"><div class="product-price">DESDE $95 USD</div><span class="product-badge">MÁS VENDIDO</span></div>
     </article>
     <article class="product-card reveal reveal-delay-1">
       <div class="product-num">02 / ADAPTADOR</div>
-      <span class="product-icon">🔗</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <rect x="60" y="20" width="44" height="56" rx="8" fill="#1a3020" stroke="#00e5a0" stroke-width="1.2"/>
+  <circle cx="82" cy="38" r="5" fill="#0a1810" stroke="#00a070" stroke-width="0.8"/>
+  <circle cx="82" cy="52" r="5" fill="#0a1810" stroke="#00a070" stroke-width="0.8"/>
+  <circle cx="82" cy="66" r="4" fill="#00e5a0" opacity=".4"/>
+  <rect x="74" y="75" width="16" height="8" rx="2" fill="#00e5a0" opacity=".5"/>
+  <path d="M82 83 L82 95" stroke="#00e5a0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="116" y="28" width="44" height="44" rx="22" fill="#1a3020" stroke="#ff6a1a" stroke-width="1.2"/>
+  <circle cx="138" cy="44" r="4" fill="#0a1810" stroke="#ff6a1a" stroke-width="0.8"/>
+  <circle cx="138" cy="58" r="4" fill="#0a1810" stroke="#ff6a1a" stroke-width="0.8"/>
+  <path d="M138 72 L138 90" stroke="#ff6a1a" stroke-width="3" stroke-linecap="round"/>
+  <path d="M82 95 Q82 110 110 110 Q138 110 138 90" stroke="#3a6a4a" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <text x="110" y="128" text-anchor="middle" font-size="7" fill="#3a6a4a" font-family="monospace" letter-spacing="1">TYPE 2 → SCHUKO · IP44 · CE</text>
+  <text x="70" y="16" text-anchor="middle" font-size="6" fill="#00e5a0" font-family="monospace">EV</text>
+  <text x="138" y="16" text-anchor="middle" font-size="6" fill="#ff6a1a" font-family="monospace">220V</text>
+</svg>
       <h3 class="product-name">ADAPTADOR<br>TYPE 2 → SCHUKO</h3>
       <p class="product-desc">Cargá desde cualquier enchufe doméstico. Ideal para viajes o como respaldo. Certificado CE, protección IP44, cable 5m.</p>
       <div class="product-meta"><div class="product-price">DESDE $65 USD</div><span class="product-badge hot">IMPRESCINDIBLE</span></div>
     </article>
     <article class="product-card reveal reveal-delay-2">
       <div class="product-num">03 / CARGADOR PORTÁTIL</div>
-      <span class="product-icon">🔋</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <rect x="70" y="15" width="80" height="90" rx="8" fill="#0d2010" stroke="#00e5a0" stroke-width="1.2"/>
+  <rect x="80" y="24" width="60" height="28" rx="4" fill="#0a1408" stroke="#00a070" stroke-width="0.5"/>
+  <text x="110" y="35" text-anchor="middle" font-size="8" fill="#00e5a0" font-family="monospace" font-weight="bold">16A</text>
+  <text x="110" y="46" text-anchor="middle" font-size="6" fill="#5a9a6a" font-family="monospace">3.5kW</text>
+  <rect x="82" y="58" width="56" height="8" rx="3" fill="#1a3020"/>
+  <rect x="82" y="58" width="42" height="8" rx="3" fill="#00e5a0" opacity=".7"/>
+  <text x="110" y="80" text-anchor="middle" font-size="6" fill="#5a9a6a" font-family="monospace">IP65</text>
+  <circle cx="110" cy="92" r="5" fill="#1a3020" stroke="#00e5a0" stroke-width="0.8"/>
+  <rect x="80" y="56" width="8" height="4" rx="1" fill="#ff6a1a" opacity=".5"/>
+  <path d="M70 95 Q50 95 45 110 Q40 125 55 128" stroke="#00e5a0" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <path d="M150 95 Q170 95 175 110 Q180 125 165 128" stroke="#3a6a4a" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <rect x="40" y="120" width="28" height="16" rx="4" fill="#1a3020" stroke="#00e5a0" stroke-width="1"/>
+  <circle cx="49" cy="128" r="2.5" fill="#00e5a0" opacity=".7"/>
+  <circle cx="58" cy="128" r="2.5" fill="#00e5a0" opacity=".7"/>
+  <rect x="152" y="120" width="28" height="16" rx="8" fill="#0d2010" stroke="#ff6a1a" stroke-width="1"/>
+  <circle cx="161" cy="125" r="2" fill="#ff6a1a" opacity=".5"/>
+  <circle cx="170" cy="128" r="2" fill="#ff6a1a" opacity=".5"/>
+  <circle cx="161" cy="131" r="2" fill="#ff6a1a" opacity=".5"/>
+  <text x="110" y="136" text-anchor="middle" font-size="6.5" fill="#3a6a4a" font-family="monospace" letter-spacing="1">EVSE MODE 3 · 8-16A ADJ · CE</text>
+</svg>
       <h3 class="product-name">EVSE PORTÁTIL<br>3.5KW AJUSTABLE</h3>
       <p class="product-desc">Cargador inteligente con ajuste 8A–16A, pantalla LED y cable 5m. Listo para enchufar en casa o en el trabajo sin instalación.</p>
       <div class="product-meta"><div class="product-price">DESDE $200 USD</div><span class="product-badge">RECOMENDADO</span></div>
     </article>
     <article class="product-card reveal">
       <div class="product-num">04 / SEGURIDAD</div>
-      <span class="product-icon">🔒</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <circle cx="110" cy="65" r="42" fill="none" stroke="#1a1010" stroke-width="12"/>
+  <circle cx="110" cy="65" r="42" fill="none" stroke="#3a1010" stroke-width="2" stroke-dasharray="6 4"/>
+  <rect x="80" y="40" width="60" height="50" rx="6" fill="#1a0808" stroke="#ff6a1a" stroke-width="1.2"/>
+  <path d="M90 40 Q90 22 110 22 Q130 22 130 40" fill="none" stroke="#ff6a1a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="95" y="56" width="30" height="22" rx="3" fill="#0a0505" stroke="#ff6a1a" stroke-width="0.5"/>
+  <circle cx="110" cy="67" r="5" fill="#ff6a1a" opacity=".7"/>
+  <rect x="108" y="67" width="4" height="7" rx="1" fill="#ff6a1a" opacity=".5"/>
+  <path d="M94 30 L86 22 M126 30 L134 22" stroke="#ff6a1a" stroke-width="1.5" stroke-linecap="round" opacity=".4"/>
+  <text x="110" y="108" text-anchor="middle" font-size="7.5" fill="#ff6a1a" font-family="monospace" font-weight="bold">120dB</text>
+  <text x="110" y="120" text-anchor="middle" font-size="6" fill="#5a3a3a" font-family="monospace">ALARMA ANTIRROBO</text>
+  <text x="110" y="133" text-anchor="middle" font-size="6" fill="#3a2020" font-family="monospace">E-BIKE · SCOOTER · MOTO</text>
+</svg>
       <h3 class="product-name">CANDADO DISCO<br>+ ALARMA 120dB</h3>
       <p class="product-desc">Protección para e-bike, scooter y moto eléctrica. Alarma de 120dB, acero templado. Ideal para uso urbano y delivery.</p>
       <div class="product-meta"><div class="product-price">DESDE $45 USD</div><span class="product-badge hot">REGALO IDEAL</span></div>
     </article>
     <article class="product-card reveal reveal-delay-1">
       <div class="product-num">05 / REPUESTO MOTO</div>
-      <span class="product-icon">⚡</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <rect x="60" y="20" width="100" height="75" rx="8" fill="#0d1a10" stroke="#00e5a0" stroke-width="1.2"/>
+  <rect x="72" y="30" width="76" height="40" rx="4" fill="#060e08" stroke="#1a3020" stroke-width="0.5"/>
+  <text x="110" y="46" text-anchor="middle" font-size="10" fill="#00e5a0" font-family="monospace" font-weight="bold">72V</text>
+  <text x="110" y="60" text-anchor="middle" font-size="7" fill="#5a9a6a" font-family="monospace">60V / 48V</text>
+  <circle cx="80" cy="80" r="4" fill="#00e5a0" opacity=".6"/>
+  <circle cx="110" cy="80" r="4" fill="#ff6a1a" opacity=".5"/>
+  <circle cx="140" cy="80" r="4" fill="#00e5a0" opacity=".3"/>
+  <rect x="98" y="86" width="24" height="6" rx="2" fill="#00e5a0" opacity=".4"/>
+  <path d="M110 95 L110 112" stroke="#00e5a0" stroke-width="3" stroke-linecap="round"/>
+  <rect x="88" y="112" width="44" height="18" rx="5" fill="#1a3020" stroke="#00e5a0" stroke-width="1"/>
+  <text x="110" y="125" text-anchor="middle" font-size="7" fill="#00e5a0" font-family="monospace">GX16 · XT60</text>
+  <text x="110" y="136" text-anchor="middle" font-size="6" fill="#3a5a3a" font-family="monospace">LITIO · LIFEPO4 · CE · ROHS</text>
+</svg>
       <h3 class="product-name">CARGADOR MOTO<br>72V / 60V / 48V</h3>
       <p class="product-desc">Para motos y scooters eléctricos. Alta eficiencia, protección de sobrecarga y temperatura. Esencial para riders de delivery.</p>
       <div class="product-meta"><div class="product-price">DESDE $100 USD</div><span class="product-badge">DELIVERY PRO</span></div>
     </article>
     <article class="product-card reveal reveal-delay-2">
       <div class="product-num">06 / KIT COMPLETO</div>
-      <span class="product-icon">🎒</span>
+      <svg width="100%" viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg" style="display:block;margin-bottom:.8rem;border-radius:4px;background:#060e08;">
+  <rect width="220" height="140" fill="#060e08"/>
+  <rect x="40" y="30" width="140" height="80" rx="10" fill="#0d2010" stroke="#00e5a0" stroke-width="1"/>
+  <rect x="55" y="22" width="30" height="12" rx="4" fill="#1a3020" stroke="#00e5a0" stroke-width="0.8"/>
+  <rect x="135" y="22" width="30" height="12" rx="4" fill="#1a3020" stroke="#00e5a0" stroke-width="0.8"/>
+  <rect x="50" y="42" width="50" height="32" rx="4" fill="#060e08" stroke="#1a3020" stroke-width="0.5"/>
+  <text x="75" y="55" text-anchor="middle" font-size="7" fill="#00e5a0" font-family="monospace">CABLE</text>
+  <text x="75" y="66" text-anchor="middle" font-size="6" fill="#3a6a4a" font-family="monospace">TIPO 2</text>
+  <rect x="110" y="42" width="40" height="32" rx="4" fill="#060e08" stroke="#1a3020" stroke-width="0.5"/>
+  <text x="130" y="55" text-anchor="middle" font-size="6.5" fill="#ff6a1a" font-family="monospace">ADAPT.</text>
+  <text x="130" y="66" text-anchor="middle" font-size="6" fill="#5a3a1a" font-family="monospace">SCHUKO</text>
+  <rect x="160" y="42" width="15" height="32" rx="3" fill="#060e08" stroke="#1a3020" stroke-width="0.5"/>
+  <text x="167" y="55" text-anchor="middle" font-size="5" fill="#5a9a6a" font-family="monospace">GLV</text>
+  <text x="75" y="92" text-anchor="middle" font-size="7" fill="#00e5a0" font-family="monospace">KIT DE VIAJE</text>
+  <text x="130" y="92" text-anchor="middle" font-size="6" fill="#3a6a4a" font-family="monospace">ELECTROMOV</text>
+  <polygon points="110,100 106,108 114,108" fill="#00e5a0" opacity=".4"/>
+  <text x="110" y="118" text-anchor="middle" font-size="7" fill="#00e5a0" font-family="monospace">⚡ PREMIUM SET</text>
+  <text x="110" y="130" text-anchor="middle" font-size="6" fill="#3a5a3a" font-family="monospace">CABLE + ADAPT. + GUANTES + BOLSA</text>
+</svg>
       <h3 class="product-name">KIT DE VIAJE<br>ELECTROMOV</h3>
       <p class="product-desc">Cable Tipo 2 + Adaptador Schuko + Guantes aislantes en bolsa exclusiva. El regalo perfecto para el dueño de un EV.</p>
       <div class="product-meta"><div class="product-price">DESDE $185 USD</div><span class="product-badge">KIT PREMIUM</span></div>
@@ -942,6 +1073,127 @@ etCmpUpdate();
 </script>
 <!-- ========== FIN HERRAMIENTAS ========== -->
 
+
+
+<!-- ========== MAPA ENVÍOS ========== -->
+<section style="padding:5rem 3rem;background:#0e1215;border-top:1px solid #1e2730;border-bottom:1px solid #1e2730;" id="envios">
+  <div style="font-family:'Space Mono',monospace;font-size:.65rem;color:#00e5a0;letter-spacing:.2em;text-transform:uppercase;margin-bottom:.8rem;display:flex;align-items:center;gap:.8rem;"><span style="display:block;width:30px;height:1px;background:#00e5a0;"></span>COBERTURA DE ENVÍOS</div>
+  <h2 style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2.2rem,4vw,3.8rem);line-height:.95;letter-spacing:.02em;margin-bottom:.8rem;color:#edf0f2;">ENVIAMOS A<br><span style="color:#00e5a0;">TODO ARGENTINA</span></h2>
+  <p style="color:#7a8898;font-size:.92rem;line-height:1.7;margin-bottom:2.5rem;max-width:480px;">Cobertura total por Andreani y Correo Argentino. Despacho en 24hs hábiles. Hacé click en tu provincia para ver tiempos y costos.</p>
+
+  <div style="display:grid;grid-template-columns:1fr 290px;gap:0;border:0.5px solid #1e2730;border-radius:8px;overflow:hidden;max-width:900px;">
+    <div style="padding:1rem;background:#080a0c;">
+      <div style="font-size:11px;font-weight:500;color:#7a8898;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.6rem;font-family:'Space Mono',monospace;">Hacé click en tu provincia</div>
+      <svg viewBox="0 0 340 520" width="100%" xmlns="http://www.w3.org/2000/svg" style="display:block;">
+        <rect x="8" y="8" width="10" height="10" rx="2" fill="#00c488"/>
+        <text x="21" y="17" font-size="8" fill="#4a9a6a" font-family="monospace">24-48hs</text>
+        <rect x="70" y="8" width="10" height="10" rx="2" fill="#9FE1CB"/>
+        <text x="83" y="17" font-size="8" fill="#4a9a6a" font-family="monospace">48-96hs</text>
+        <rect x="135" y="8" width="10" height="10" rx="2" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/>
+        <text x="148" y="17" font-size="8" fill="#4a9a6a" font-family="monospace">+5 días</text>
+
+        <g style="cursor:pointer;" onclick="smP('jujuy')"><rect x="40" y="28" width="38" height="30" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="59" y="47" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">Jujuy</text></g>
+        <g style="cursor:pointer;" onclick="smP('salta')"><rect x="80" y="28" width="48" height="38" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="104" y="50" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">Salta</text></g>
+        <g style="cursor:pointer;" onclick="smP('formosa')"><rect x="130" y="28" width="60" height="28" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="160" y="45" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Formosa</text></g>
+        <g style="cursor:pointer;" onclick="smP('misiones')"><rect x="252" y="28" width="46" height="42" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="275" y="52" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Misiones</text></g>
+        <g style="cursor:pointer;" onclick="smP('tucuman')"><rect x="40" y="60" width="38" height="28" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="59" y="77" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">Tucumán</text></g>
+        <g style="cursor:pointer;" onclick="smP('chaco')"><rect x="130" y="58" width="60" height="38" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="160" y="80" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Chaco</text></g>
+        <g style="cursor:pointer;" onclick="smP('corrientes')"><rect x="192" y="58" width="58" height="42" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="221" y="82" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Corrientes</text></g>
+        <g style="cursor:pointer;" onclick="smP('catamarca')"><rect x="40" y="90" width="40" height="38" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="60" y="112" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">Catamarca</text></g>
+        <g style="cursor:pointer;" onclick="smP('santiago')"><rect x="82" y="68" width="46" height="58" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="105" y="93" text-anchor="middle" font-size="6" fill="#085041" font-weight="500">Stgo.</text><text x="105" y="103" text-anchor="middle" font-size="6" fill="#085041" font-weight="500">Estero</text></g>
+        <g style="cursor:pointer;" onclick="smP('entre-rios')"><rect x="220" y="102" width="50" height="48" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="245" y="126" text-anchor="middle" font-size="6" fill="#04342C" font-weight="500">Entre Ríos</text></g>
+        <g style="cursor:pointer;" onclick="smP('la-rioja')"><rect x="14" y="130" width="38" height="38" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="33" y="152" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">La Rioja</text></g>
+        <g style="cursor:pointer;" onclick="smP('san-juan')"><rect x="14" y="170" width="38" height="36" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="33" y="191" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">San Juan</text></g>
+        <g style="cursor:pointer;" onclick="smP('cordoba')"><rect x="82" y="128" width="70" height="60" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="117" y="162" text-anchor="middle" font-size="7" fill="#04342C" font-weight="500">Córdoba</text></g>
+        <g style="cursor:pointer;" onclick="smP('santa-fe')"><rect x="154" y="98" width="64" height="90" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="186" y="148" text-anchor="middle" font-size="7" fill="#04342C" font-weight="500">Santa Fe</text></g>
+        <g style="cursor:pointer;" onclick="smP('mendoza')"><rect x="14" y="208" width="46" height="52" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="37" y="237" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">Mendoza</text></g>
+        <g style="cursor:pointer;" onclick="smP('san-luis')"><rect x="62" y="190" width="52" height="44" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="88" y="215" text-anchor="middle" font-size="6.5" fill="#04342C" font-weight="500">San Luis</text></g>
+        <g style="cursor:pointer;" onclick="smP('buenos-aires')"><rect x="116" y="190" width="114" height="104" rx="2" fill="#00c488" stroke="#080a0c" stroke-width="0.8"/><text x="173" y="248" text-anchor="middle" font-size="8" fill="#04342C" font-weight="500">Buenos Aires</text></g>
+        <g style="cursor:pointer;" onclick="smP('caba')"><circle cx="248" cy="196" r="9" fill="#00a070" stroke="#080a0c" stroke-width="1.2"/><text x="248" y="199" text-anchor="middle" font-size="5.5" fill="white" font-weight="500">CABA</text></g>
+        <g style="cursor:pointer;" onclick="smP('la-pampa')"><rect x="62" y="236" width="82" height="56" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="103" y="267" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">La Pampa</text></g>
+        <g style="cursor:pointer;" onclick="smP('neuquen')"><rect x="14" y="262" width="66" height="44" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="47" y="287" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Neuquén</text></g>
+        <g style="cursor:pointer;" onclick="smP('rio-negro')"><rect x="14" y="308" width="142" height="40" rx="2" fill="#9FE1CB" stroke="#080a0c" stroke-width="0.8"/><text x="85" y="331" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Río Negro</text></g>
+        <g style="cursor:pointer;" onclick="smP('chubut')"><rect x="14" y="350" width="142" height="54" rx="2" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/><text x="85" y="380" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Chubut</text></g>
+        <g style="cursor:pointer;" onclick="smP('santa-cruz')"><rect x="14" y="406" width="142" height="54" rx="2" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/><text x="85" y="436" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Santa Cruz</text></g>
+        <g style="cursor:pointer;" onclick="smP('tierra-fuego')"><rect x="14" y="462" width="142" height="38" rx="2" fill="#E1F5EE" stroke="#9FE1CB" stroke-width="0.5"/><text x="85" y="484" text-anchor="middle" font-size="6.5" fill="#085041" font-weight="500">Tierra del Fuego</text></g>
+        <text x="170" y="512" text-anchor="middle" font-size="8" fill="#3a5040">Clic en tu provincia</text>
+      </svg>
+    </div>
+    <div id="sm-info" style="padding:1.2rem;border-left:0.5px solid #1e2730;display:flex;flex-direction:column;gap:.7rem;background:#0e1215;">
+      <div id="sm-default">
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:.04em;color:#edf0f2;margin-bottom:.5rem;">Enviamos a todo Argentina</div>
+        <div style="font-size:.78rem;color:#7a8898;line-height:1.6;margin-bottom:.8rem;">Seleccioná tu provincia para ver el tiempo y costo de envío.</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;">
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#00e5a0;">24hs</div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">CABA/GBA</div></div>
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#ff6a1a;">48-72hs</div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">INTERIOR</div></div>
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#7a8898;">5-7d</div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">PATAGONIA</div></div>
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#00e5a0;">Gratis</div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">+$80.000</div></div>
+        </div>
+      </div>
+      <div id="sm-prov" style="display:none;">
+        <div style="font-size:.6rem;font-family:'Space Mono',monospace;color:#7a8898;letter-spacing:.1em;margin-bottom:.3rem;" id="sm-region"></div>
+        <div style="font-family:'Bebas Neue',sans-serif;font-size:1.4rem;letter-spacing:.04em;color:#edf0f2;margin-bottom:.3rem;" id="sm-name"></div>
+        <div id="sm-badge-wrap" style="margin-bottom:.6rem;"></div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:.4rem;margin-bottom:.6rem;">
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#00e5a0;" id="sm-tiempo"></div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">TIEMPO</div></div>
+          <div style="background:#080a0c;border:1px solid #1e2730;padding:.6rem;"><div style="font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#edf0f2;" id="sm-costo"></div><div style="font-size:.6rem;color:#7a8898;font-family:'Space Mono',monospace;">ENVÍO</div></div>
+        </div>
+        <div style="font-size:.75rem;color:#5a9a6a;line-height:1.5;margin-bottom:.6rem;" id="sm-info2"></div>
+        <a id="sm-wa" href="#" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:.4rem;background:#25D366;color:white;padding:.5rem .9rem;text-decoration:none;font-size:.75rem;font-weight:600;font-family:'DM Sans',sans-serif;clip-path:polygon(4px 0%,100% 0%,calc(100% - 4px) 100%,0% 100%);">💬 Consultar envío</a>
+        <div style="margin-top:.6rem;font-size:.7rem;color:#7a8898;cursor:pointer;" onclick="smReset()">← Todas las provincias</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+var smData={
+  jujuy:{n:'Jujuy',r:'Noroeste',t:'48-72hs',c:'$6.300',b:'med',i:'Andreani a S.S. de Jujuy y localidades.'},
+  salta:{n:'Salta',r:'Noroeste',t:'48-72hs',c:'$5.880',b:'med',i:'Cobertura total con Andreani y Correo.'},
+  formosa:{n:'Formosa',r:'Noreste',t:'48-72hs',c:'$5.880',b:'med',i:'Enviamos a Formosa capital y localidades.'},
+  chaco:{n:'Chaco',r:'Noreste',t:'48-72hs',c:'$5.320',b:'med',i:'Despacho en 24hs hábiles.'},
+  misiones:{n:'Misiones',r:'Noreste',t:'48-72hs',c:'$5.600',b:'med',i:'Enviamos a Posadas y demás localidades.'},
+  tucuman:{n:'Tucumán',r:'Noroeste',t:'48-72hs',c:'$4.900',b:'med',i:'Excelente cobertura Andreani.'},
+  santiago:{n:'Santiago del Estero',r:'Noroeste',t:'48-72hs',c:'$5.320',b:'med',i:'Cobertura a Santiago capital y localidades.'},
+  corrientes:{n:'Corrientes',r:'Noreste',t:'48-72hs',c:'$5.320',b:'med',i:'Cobertura total por Andreani y Correo.'},
+  'entre-rios':{n:'Entre Ríos',r:'Litoral',t:'48hs',c:'$4.480',b:'fast',i:'Muy buena cobertura. Cercana a CABA.'},
+  catamarca:{n:'Catamarca',r:'Noroeste',t:'48-72hs',c:'$5.600',b:'med',i:'Enviamos a S.F. del Valle y localidades.'},
+  'la-rioja':{n:'La Rioja',r:'Cuyo',t:'48-72hs',c:'$5.320',b:'med',i:'Cobertura a La Rioja capital y localidades.'},
+  cordoba:{n:'Córdoba',r:'Centro',t:'24-48hs',c:'$3.920',b:'fast',i:'Excelente cobertura. Andreani Prioritario.'},
+  'santa-fe':{n:'Santa Fe',r:'Centro',t:'24-48hs',c:'$3.640',b:'fast',i:'Rosario con entrega en 24hs.'},
+  'san-juan':{n:'San Juan',r:'Cuyo',t:'48-72hs',c:'$5.600',b:'med',i:'Enviamos a San Juan capital y GS Juan.'},
+  mendoza:{n:'Mendoza',r:'Cuyo',t:'48-72hs',c:'$4.900',b:'med',i:'Muy buena cobertura en Gran Mendoza.'},
+  'san-luis':{n:'San Luis',r:'Cuyo',t:'48hs',c:'$4.480',b:'fast',i:'Cercana a CABA. Entrega rápida.'},
+  'buenos-aires':{n:'Buenos Aires',r:'Provincia',t:'24-48hs',c:'Gratis*',b:'fast',i:'GBA 24hs. Interior 48hs. Gratis +$80.000.'},
+  caba:{n:'CABA',r:'Capital Federal',t:'24hs',c:'Gratis',b:'fast',i:'Express 24hs. Siempre gratis.'},
+  'la-pampa':{n:'La Pampa',r:'Patagonia Norte',t:'48-72hs',c:'$4.900',b:'med',i:'Enviamos a Santa Rosa y localidades.'},
+  neuquen:{n:'Neuquén',r:'Patagonia Norte',t:'72-96hs',c:'$7.700',b:'med',i:'Patagonia Norte. Buena conectividad logística.'},
+  'rio-negro':{n:'Río Negro',r:'Patagonia Norte',t:'72-96hs',c:'$8.120',b:'med',i:'Viedma, Bariloche y principales localidades.'},
+  chubut:{n:'Chubut',r:'Patagonia',t:'5-7 días',c:'$9.100',b:'slow',i:'Correo Argentino con tracking incluido.'},
+  'santa-cruz':{n:'Santa Cruz',r:'Patagonia Sur',t:'5-7 días',c:'$10.080',b:'slow',i:'Correo Argentino prioritario.'},
+  'tierra-fuego':{n:'Tierra del Fuego',r:'Patagonia Sur',t:'7-10 días',c:'$11.900',b:'slow',i:'Ushuaia y Río Grande por Correo Argentino.'},
+};
+window.smP=function(id){
+  var d=smData[id];if(!d)return;
+  document.getElementById('sm-default').style.display='none';
+  document.getElementById('sm-prov').style.display='block';
+  document.getElementById('sm-region').textContent=d.r;
+  document.getElementById('sm-name').textContent=d.n;
+  document.getElementById('sm-tiempo').textContent=d.t;
+  document.getElementById('sm-costo').textContent=d.c;
+  document.getElementById('sm-info2').textContent=d.i;
+  var bl=d.b==='fast'?'Entrega rápida':d.b==='med'?'Estándar':'Zona lejana';
+  var bc=d.b==='fast'?'background:rgba(0,229,160,.12);color:#00e5a0;border:1px solid rgba(0,229,160,.25);':d.b==='med'?'background:rgba(255,106,26,.12);color:#ff6a1a;border:1px solid rgba(255,106,26,.25);':'background:#1e2730;color:#7a8898;border:1px solid #1e2730;';
+  document.getElementById('sm-badge-wrap').innerHTML='<span style="display:inline-block;font-size:.6rem;font-family:Space Mono,monospace;letter-spacing:.08em;padding:.2rem .6rem;'+bc+'">'+bl+'</span>';
+  var wt='Hola, quiero consultar el envio a '+d.n+' de un producto de ElectroMov';
+  document.getElementById('sm-wa').href='https://wa.me/5491135330569?text='+encodeURIComponent(wt);
+};
+window.smReset=function(){
+  document.getElementById('sm-default').style.display='block';
+  document.getElementById('sm-prov').style.display='none';
+};
+</script>
+<!-- ========== FIN MAPA ENVÍOS ========== -->
 
 <section class="cta" id="contacto">
   <h2 class="reveal">¿TENÉS UN<br><span>AUTO ELÉCTRICO?</span><br>NOSOTROS TE EQUIPAMOS.</h2>
@@ -1744,6 +1996,89 @@ emSimUpdate();emCmpUpdate();
 })();
 </script>
 <!-- ========== FIN AGENTE VOLT v3 ========== -->
+
+
+<!-- ========== POP-UP EMAIL ========== -->
+<style>
+#em-popup-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:10000;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .35s ease;backdrop-filter:blur(4px);}
+#em-popup-overlay.show{opacity:1;pointer-events:all;}
+#em-popup{background:#080a0c;border:1px solid #00e5a0;width:420px;max-width:calc(100vw - 2rem);padding:0;position:relative;transform:translateY(20px) scale(.97);transition:transform .35s cubic-bezier(.22,1,.36,1);}
+#em-popup-overlay.show #em-popup{transform:translateY(0) scale(1);}
+#em-popup::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,#00e5a0,#ff6a1a,#00e5a0);background-size:200% 100%;animation:topBar 3s linear infinite;}
+@keyframes topBar{0%{background-position:0%}100%{background-position:200%}}
+.popup-header{background:#0e1215;padding:1.5rem 1.5rem 1rem;border-bottom:1px solid #1e2730;}
+.popup-bolt{font-size:2rem;display:block;margin-bottom:.5rem;}
+.popup-title{font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:.04em;color:#edf0f2;line-height:1;}
+.popup-title span{color:#00e5a0;}
+.popup-sub{font-size:.82rem;color:#7a8898;margin-top:.4rem;line-height:1.5;}
+.popup-body{padding:1.5rem;}
+.popup-offer{background:#0e1215;border:1px solid #1e2730;border-left:3px solid #00e5a0;padding:.8rem 1rem;margin-bottom:1rem;font-size:.82rem;color:#5a9a6a;line-height:1.6;}
+.popup-offer strong{color:#00e5a0;}
+.popup-input-wrap{display:flex;gap:.5rem;margin-bottom:.6rem;}
+#popup-email{flex:1;background:#0e1215;border:1px solid #1e2730;border-left:2px solid #00e5a0;color:#edf0f2;padding:.6rem .9rem;font-size:.84rem;font-family:'DM Sans',sans-serif;outline:none;}
+#popup-email:focus{border-color:#00e5a0;}
+#popup-email::placeholder{color:#3a5040;}
+#popup-submit{background:#00e5a0;border:none;color:#080a0c;padding:.6rem 1.2rem;font-weight:700;font-size:.78rem;cursor:pointer;font-family:'Space Mono',monospace;letter-spacing:.06em;transition:background .18s;clip-path:polygon(5px 0%,100% 0%,calc(100% - 5px) 100%,0% 100%);white-space:nowrap;}
+#popup-submit:hover{background:#ff6a1a;}
+.popup-fine{font-size:.68rem;color:#3a5040;text-align:center;}
+#popup-close{position:absolute;top:.8rem;right:.8rem;background:none;border:none;color:#7a8898;font-size:1.1rem;cursor:pointer;padding:.2rem;line-height:1;transition:color .2s;}
+#popup-close:hover{color:#edf0f2;}
+#popup-thanks{display:none;text-align:center;padding:2rem;}
+#popup-thanks .t-icon{font-size:2.5rem;display:block;margin-bottom:.8rem;}
+#popup-thanks .t-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#00e5a0;letter-spacing:.04em;}
+#popup-thanks .t-sub{font-size:.84rem;color:#7a8898;margin-top:.5rem;line-height:1.5;}
+</style>
+<div id="em-popup-overlay">
+  <div id="em-popup">
+    <button id="popup-close" onclick="closePopup()">✕</button>
+    <div class="popup-header">
+      <span class="popup-bolt">⚡</span>
+      <div class="popup-title">OBTENÉ UN<br><span>10% OFF</span></div>
+      <div class="popup-sub">Suscribite y recibí descuentos exclusivos, novedades de productos y tips de carga EV.</div>
+    </div>
+    <div class="popup-body">
+      <div class="popup-offer">
+        Con tu suscripción recibís: <strong>10% de descuento</strong> en tu primera compra + alertas de stock + guía gratuita "Cómo cargar tu EV en Argentina"
+      </div>
+      <div id="popup-form">
+        <div class="popup-input-wrap">
+          <input type="email" id="popup-email" placeholder="tu@email.com" onkeydown="if(event.key==='Enter')submitPopup()">
+          <button id="popup-submit" onclick="submitPopup()">QUIERO EL 10%</button>
+        </div>
+        <div class="popup-fine">Sin spam. Podés darte de baja cuando quieras.</div>
+      </div>
+      <div id="popup-thanks">
+        <span class="t-icon">✅</span>
+        <div class="t-title">¡LISTO!</div>
+        <div class="t-sub">Tu descuento del 10% fue enviado a tu email.<br>Revisá también la carpeta de spam.</div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var shown=false;
+  function showPopup(){
+    if(shown||localStorage.getItem('em_popup_closed'))return;
+    shown=true;
+    document.getElementById('em-popup-overlay').classList.add('show');
+  }
+  window.closePopup=function(){
+    document.getElementById('em-popup-overlay').classList.remove('show');
+    localStorage.setItem('em_popup_closed','1');
+  };
+  window.submitPopup=function(){
+    var email=document.getElementById('popup-email').value.trim();
+    if(!email||!email.includes('@'))return;
+    document.getElementById('popup-form').style.display='none';
+    document.getElementById('popup-thanks').style.display='block';
+    localStorage.setItem('em_popup_closed','1');
+    setTimeout(function(){closePopup();},3000);
+  };
+  setTimeout(showPopup, 20000);
+})();
+</script>
+<!-- ========== FIN POP-UP EMAIL ========== -->
 
 </body>
 </html>
