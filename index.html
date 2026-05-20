@@ -89,8 +89,8 @@ p{font-size:.95rem;line-height:1.7;color:var(--muted);}
 .btn svg,.btn i{width:16px;height:16px;flex-shrink:0;}
 
 /* ── NAV ──────────────────────────────────────────────── */
-nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all .3s;}
-nav.scrolled{background:rgba(10,15,13,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;transition:all .3s;background:rgba(10,15,13,.97);border-bottom:1px solid var(--border);backdrop-filter:blur(16px);}
+nav.scrolled{background:rgba(10,15,13,.99);}
 .nav-inner{display:flex;align-items:center;justify-content:space-between;height:60px;}
 .logo{display:flex;align-items:center;gap:.6rem;font-size:1.15rem;font-weight:600;letter-spacing:-.01em;}
 .logo svg{width:28px;height:28px;}
@@ -231,16 +231,16 @@ nav.scrolled{background:rgba(10,15,13,.92);backdrop-filter:blur(16px);border-bot
 .test-model{font-size:.7rem;color:var(--muted2);margin-top:.15rem;}
 
 /* ── FAQ ──────────────────────────────────────────────── */
-.faq-section{background:var(--bg2);border-top:1px solid var(--border);}
+.faq-section{background:var(--bg);border-top:1px solid var(--border-md);}
 .faq-list{max-width:720px;margin-top:2.5rem;}
-.faq-item{border-bottom:1px solid var(--border);}
-.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--white);padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.93rem;font-weight:400;cursor:pointer;transition:color .15s;}
+.faq-item{border-bottom:1px solid var(--border-md);}
+.faq-q{width:100%;text-align:left;background:none;border:none;color:var(--white);padding:1.25rem 0;display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:.93rem;font-weight:500;cursor:pointer;transition:color .15s;}
 .faq-q:hover{color:var(--green-text);}
-.faq-icon{width:20px;height:20px;background:var(--surface);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s;}
+.faq-icon{width:22px;height:22px;background:var(--bg3);border:1px solid var(--border-md);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:all .25s;}
 .faq-q.open .faq-icon{background:var(--green);transform:rotate(45deg);}
-.faq-icon svg{width:10px;height:10px;color:var(--muted);}
+.faq-icon svg{width:10px;height:10px;color:var(--green-text);}
 .faq-q.open .faq-icon svg{color:#fff;}
-.faq-a{font-size:.85rem;color:var(--muted);line-height:1.7;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;}
+.faq-a{font-size:.875rem;color:#9ab8a8;line-height:1.75;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .25s ease;}
 .faq-a.open{max-height:200px;padding-bottom:1.25rem;}
 
 /* ── CTA ──────────────────────────────────────────────── */
@@ -903,40 +903,7 @@ footer{background:var(--bg2);border-top:1px solid var(--border);padding:2rem 0;}
 </section>
 <!-- ========== FIN DATOS DE MERCADO ========== -->
 
-<section class="faq" id="faq">
-  <div class="section-tag">FAQ</div>
-  <h2 class="section-title">PREGUNTAS<br>FRECUENTES</h2>
-  <div class="faq-list">
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Qué cable necesito para mi auto eléctrico en Argentina?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">La mayoría de los autos eléctricos en Argentina usan conector Tipo 2 (IEC 62196): BYD, Renault, Chevrolet Spark, Volvo y Peugeot. Recomendamos un cable Mode 3 de 32A / 7kW para carga domiciliaria óptima.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Puedo cargar mi auto eléctrico en cualquier enchufe?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Sí, con nuestro adaptador Tipo 2 → Schuko podés cargar desde cualquier enchufe de 220V. Es la solución de emergencia que todo propietario de EV debería tener. La carga es más lenta (3.5kW) pero completamente segura.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Los productos tienen garantía?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Todos nuestros productos tienen 12 meses de garantía. En caso de falla, hacemos el cambio sin preguntas. Todos los accesorios cuentan con certificación CE e IEC 62196.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Hacen envíos a todo el país?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Sí, enviamos a todo Argentina por Andreani y Correo Argentino. El despacho se realiza dentro de las 24hs hábiles de confirmado el pago. También podés retirar sin cargo en nuestro local en Berazategui.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Puedo pagar en cuotas?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Sí, aceptamos todas las tarjetas con hasta 12 cuotas sin interés vía Mercado Pago. También podemos coordinar transferencia bancaria o efectivo en el local.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿El BYD Atto 2 y el BYD Shark usan el mismo cable que el Dolphin Mini?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Sí, todos los modelos BYD en Argentina (Dolphin Mini, Atto 2, Yuan Pro, Seal y Shark PHEV) usan conector Tipo 2 para carga AC domiciliaria. Nuestro Cable Tipo 2 Mode 3 32A es compatible con todos ellos sin excepción.</div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-question" aria-expanded="false">¿Cuánto cuesta cargar un auto eléctrico en casa?<span class="faq-icon">+</span></button>
-      <div class="faq-answer">Con la tarifa domiciliaria vigente ($132/kWh desde febrero 2026), cargar un BYD Dolphin Mini o Spark EUV al 100% cuesta aproximadamente $5.500. Con nafta la misma distancia sale ~$70.000. El ahorro es superior al 90% usando carga domiciliaria con nuestro Cable Tipo 2.</div>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ========== HERRAMIENTAS ELECTROMOV ========== -->
