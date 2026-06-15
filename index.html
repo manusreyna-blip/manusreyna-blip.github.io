@@ -122,8 +122,7 @@ header.scrolled{border-color:var(--line);box-shadow:0 6px 24px -18px rgba(11,31,
 .hero-card h3{color:#fff;font-size:1.5rem;margin:6px 0 4px}
 .hero-card .sub{color:#9fbcae;font-size:.9rem;margin-bottom:18px}
 .charge-track{height:12px;border-radius:8px;background:rgba(255,255,255,.08);overflow:hidden;position:relative}
-.charge-fill{height:100%;width:0;border-radius:8px;background:linear-gradient(90deg,var(--brand),var(--current-bright));animation:charge 3.4s ease-in-out infinite}
-@keyframes charge{0%{width:6%}55%{width:92%}100%{width:6%}}
+.charge-fill{height:100%;width:12%;border-radius:8px;background:linear-gradient(90deg,var(--brand),var(--current-bright));transition:width 1.9s cubic-bezier(.45,0,.25,1)}
 .charge-row{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.78rem;color:#9fbcae;margin-top:9px}
 .hero-card .grid2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
 .mini-stat{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:12px;padding:12px 14px}
@@ -338,7 +337,7 @@ footer{background:#081610;color:#9fbcae;padding:54px 0 30px;font-size:.9rem}
   .nav-cta .btn-ghost{display:none}
   .hero h1{font-size:2.1rem}
 }
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto}.charge-fill{transition:width 1.9s cubic-bezier(.45,0,.25,1)!important}}
 </style>
 </head>
 <body>
@@ -870,6 +869,16 @@ document.getElementById('arrSend').addEventListener('click',function(){
   const m=encodeURIComponent(document.getElementById('arrMsg').value||'');
   this.href=WA+`Solicitud%20de%20arrepentimiento%20de%20compra.%20Nombre%3A%20${n}.%20Pedido%3A%20${o}.%20Motivo%3A%20${m}`;
 });
+
+/* ---------- charge bar (JS-driven so it animates even with reduced motion / low power) ---------- */
+(function(){
+  var fill=document.querySelector('.charge-fill');
+  if(!fill)return;
+  var up=true;
+  function tick(){fill.style.width=up?'95%':'10%';up=!up;}
+  setTimeout(tick,400);
+  setInterval(tick,2200);
+})();
 </script>
 </body>
 </html>
